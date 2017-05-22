@@ -14,14 +14,17 @@ $white: lighten($vanilla,10%);
 $black: darken($slate,20%);
 
 //2.2 Font imports & settings
-@include font-face('Font Awesome', '../fonts/fontAwesome/fontawesome-webfont');
-@include font-face('Museo', '../fonts/museo/exljbris_-_museo-500-webfont');
+@include font-face('Font Awesome', '../../fonts/fontAwesome/fontawesome-webfont');
+@include font-face('Montserrat', '../../fonts/Montserrat/Montserrat-Light');
+@include font-face('Montserrat', '../../fonts/Montserrat/Montserrat-LightItalic', normal, italic);
+@include font-face('Montserrat', '../../fonts/Montserrat/Montserrat-Medium', bold);
+@include font-face('Montserrat', '../../fonts/Montserrat/Montserrat-MediumItalic', bold, italic);
 
-$font:'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+$font:'Montserrat', Helvetica, Arial, sans-serif !default;
 $fontSize:1em !default;
 $lineHeight:1.5 !default;
 
-$headerFont: sans-serif !default;
+$headerFont: 'Montserrat', Helvetica, Arial, sans-serif !default;
 $headerLineHeight:1.3;
 
 $iconFont:'Font Awesome', monospace !default;
@@ -38,6 +41,7 @@ $screenSmall:480px;
 $screenMedium:640px;
 $screenLarge:860px;
 $screenXlarge:1280px;
+
 
 
 

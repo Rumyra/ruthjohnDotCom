@@ -14,17 +14,15 @@ $white: lighten($vanilla,10%);
 $black: darken($slate,20%);
 
 //2.2 Font imports & settings
-@include font-face('Font Awesome', '../../fonts/fontAwesome/fontawesome-webfont');
-@include font-face('Montserrat', '../../fonts/Montserrat/Montserrat-Light');
-@include font-face('Montserrat', '../../fonts/Montserrat/Montserrat-LightItalic', normal, italic);
-@include font-face('Montserrat', '../../fonts/Montserrat/Montserrat-Medium', bold);
-@include font-face('Montserrat', '../../fonts/Montserrat/Montserrat-MediumItalic', bold, italic);
+@include font-face('Font Awesome', '../fonts/fontAwesome/fontawesome-webfont');
+@include font-face('Khula', '../fonts/Khula/Khula-Light');
+@include font-face('Khula', '../fonts/Khula/Khula-SemiBold', bold);
 
-$font:'Montserrat', Helvetica, Arial, sans-serif !default;
+$font:'Khula', Helvetica, Arial, sans-serif !default;
 $fontSize:1em !default;
 $lineHeight:1.5 !default;
 
-$headerFont: 'Montserrat', Helvetica, Arial, sans-serif !default;
+$headerFont: 'Khula', Helvetica, Arial, sans-serif !default;
 $headerLineHeight:1.3;
 
 $iconFont:'Font Awesome', monospace !default;

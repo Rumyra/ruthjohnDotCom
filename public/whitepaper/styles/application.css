@@ -42,41 +42,29 @@ html {
   font-family: "Font Awesome";
   font-weight: normal;
   font-style: normal;
-  src: url("../../fonts/fontAwesome/fontawesome-webfont.ttf") format("truetype"); }
+  src: url("../fonts/fontAwesome/fontawesome-webfont.ttf") format("truetype"); }
 
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Khula";
   font-weight: normal;
   font-style: normal;
-  src: url("../../fonts/Montserrat/Montserrat-Light.ttf") format("truetype"); }
+  src: url("../fonts/Khula/Khula-Light.ttf") format("truetype"); }
 
 @font-face {
-  font-family: "Montserrat";
-  font-weight: normal;
-  font-style: italic;
-  src: url("../../fonts/Montserrat/Montserrat-LightItalic.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "Montserrat";
+  font-family: "Khula";
   font-weight: bold;
   font-style: normal;
-  src: url("../../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: bold;
-  font-style: italic;
-  src: url("../../fonts/Montserrat/Montserrat-MediumItalic.ttf") format("truetype"); }
+  src: url("../fonts/Khula/Khula-SemiBold.ttf") format("truetype"); }
 
 /* HTML ELEMENTS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* headers, paragraphs, lists, formatting etc... */
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.75em;
-  font-weight: normal;
+  font-weight: bold;
   line-height: 1.3; }
 
 h1, h2, h3, h4 {
-  font-family: "Montserrat", Helvetica, Arial, sans-serif; }
+  font-family: "Khula", Helvetica, Arial, sans-serif; }
 
 h1 {
   font-size: 2.6em; }
@@ -172,15 +160,6 @@ a:focus {
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
   color: white; }
 
-.content a {
-  padding: 0px 0.375em;
-  background-image: linear-gradient(to bottom, transparent 50%, white 51%);
-  background-size: 100% 200%;
-  background-position: 0 100%; }
-  .content a:hover {
-    background-position: 0 10%;
-    transition: background-position 200ms ease-out; }
-
 ol, ul, dl, menu[type="list"] {
   margin: 1.5em 3em; }
 
@@ -270,7 +249,7 @@ label, input, select, textarea, button {
   box-sizing: border-box;
   vertical-align: baseline;
   margin: 0.75em 0px 1.5em;
-  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-family: "Khula", Helvetica, Arial, sans-serif;
   font-size: 1em; }
   @media screen and (max-width: 859px) {
     label, input, select, textarea, button {
@@ -456,4 +435,77 @@ audio:not([controls]) {
 /* buttons */
 /* navigation and menus */
 /* html, body, header, footer & basic main layout */
+html {
+  background-color: #94abb4; }
+
+body {
+  overflow: auto;
+  font-family: "Khula", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  color: white;
+  line-height: 1.4; }
+  @media screen and (min-width: 1280px) {
+    body {
+      font-size: 112%; } }
+  @media screen and (max-width: 639px) {
+    body {
+      font-size: 90%; } }
+  @media screen and (max-width: 479px) {
+    body {
+      font-size: 84%; } }
+
+:focus {
+  outline: 0; }
+
+div[class^="page-"] {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: 20px solid white; }
+
+header[role="main"],
+footer[role="main"] {
+  padding: 3em 3em 1.5em;
+  box-sizing: border-box;
+  flex: none; }
+
+header[role="main"] {
+  overflow: hidden; }
+  header[role="main"] > section {
+    float: left; }
+    header[role="main"] > section h1 {
+      margin-bottom: 0px; }
+    header[role="main"] > section p {
+      margin: 0px; }
+  header[role="main"] > nav {
+    float: right;
+    display: flex;
+    width: 40%; }
+
+footer[role="main"] {
+  width: 100%;
+  padding: 1.5em 3em 3em; }
+  footer[role="main"] p, footer[role="main"] ul {
+    display: inline-block;
+    text-align: right; }
+  footer[role="main"] p {
+    padding-right: 1.5em; }
+
+.content {
+  flex: 1 0 auto;
+  padding: 1.5em 1.5em 0px; }
+
+.content::after {
+  content: '\00a0';
+  /* &nbsp; */
+  display: block;
+  margin-top: 1.5em;
+  height: 0px;
+  visibility: hidden; }
+
+/*2.2 Main content container*/
 /* PAGE LAYOUTS */

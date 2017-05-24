@@ -2,7 +2,7 @@
 header {}
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: $verticalSpace/2;
-  font-weight: normal;
+  font-weight: bold;
   line-height: $headerLineHeight;
 }
 h1, h2, h3, h4 { font-family: $headerFont; }
@@ -64,17 +64,7 @@ a:hover, a:active, a:visited {
 a:focus { outline: thin dotted; }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover { color: $white; }
 
-.content {
-  a {
-    padding:0px $gutter/4;
-    background-image:linear-gradient(to bottom, transparent 50%, $white 51%);
-    background-size:100% 200%; background-position:0 100%;
-    &:hover {
-      background-position:0 10%;
-      transition: background-position 200ms ease-out;
-    }
-  }
-}
+
 //5. BLOCK LEVEL TEXT ELEMENTS~~~~~~~~~~~~~~~~~~~~
 
 //5.1. lists, navs and menus

@@ -61,36 +61,39 @@ html {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.75em;
   font-weight: bold;
-  line-height: 1.3; }
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase; }
 
 h1, h2, h3, h4 {
   font-family: "Khula", Helvetica, Arial, sans-serif; }
 
 h1 {
-  font-size: 2.6em; }
+  font-size: 2.34em; }
 
 h2 {
-  font-size: 2.2em; }
+  font-size: 1.98em; }
 
 h3 {
-  font-size: 1.9em; }
+  font-size: 1.71em; }
 
 h4 {
-  font-size: 1.6em; }
+  font-size: 1.44em; }
 
 h5 {
-  font-size: 1.4em; }
+  font-size: 1.26em; }
 
 h6 {
-  font-size: 1.2em; }
+  font-size: 1.08em; }
 
 p {
   margin: 0.75em 0px;
-  font-size: 1em;
-  line-height: 1.5; }
+  font-size: 0.9em;
+  line-height: 1.8;
+  letter-spacing: 0.1em; }
 
 .lede, p.lede {
-  font-size: 1.2em; }
+  font-size: 1.08em; }
 
 .feature-text {
   font-weight: bold;
@@ -140,7 +143,7 @@ sub {
 a {
   display: inline-block;
   font-weight: normal;
-  font-size: 1em;
+  font-size: 0.9em;
   text-decoration: none; }
 
 p a, address a, ul a, ol a, dl a, menu a {
@@ -167,8 +170,8 @@ ol {
   list-style: lower-roman; }
 
 li, dt, dd {
-  font-size: 1em;
-  line-height: 1.5; }
+  font-size: 0.9em;
+  line-height: 1.8; }
 
 dt {
   font-weight: bold; }
@@ -189,7 +192,7 @@ blockquote {
   blockquote:before {
     float: left;
     content: '“';
-    font-size: 3em; }
+    font-size: 2.7em; }
   blockquote:after {
     content: attr(cite);
     display: block;
@@ -202,7 +205,7 @@ pre {
   background-color: #4b494b;
   font-size: 100%;
   color: white;
-  line-height: 1.5;
+  line-height: 1.8;
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word; }
@@ -223,7 +226,7 @@ fieldset {
 
 legend {
   display: none;
-  font-size: 1.4em; }
+  font-size: 1.26em; }
 
 .form-field {
   width: 100%; }
@@ -250,7 +253,7 @@ label, input, select, textarea, button {
   vertical-align: baseline;
   margin: 0.75em 0px 1.5em;
   font-family: "Khula", Helvetica, Arial, sans-serif;
-  font-size: 1em; }
+  font-size: 0.9em; }
   @media screen and (max-width: 859px) {
     label, input, select, textarea, button {
       margin: 0.375em 0px 0.75em; } }
@@ -304,7 +307,7 @@ input[type="range"] {
   @media screen and (max-width: 859px) {
     .input-radio span {
       width: 91%;
-      font-size: 0.9em; } }
+      font-size: 0.81em; } }
 
 .input-checkbox label {
   float: right;
@@ -442,8 +445,7 @@ body {
   overflow: auto;
   font-family: "Khula", Helvetica, Arial, sans-serif;
   font-size: 100%;
-  color: white;
-  line-height: 1.4; }
+  color: white; }
   @media screen and (min-width: 1280px) {
     body {
       font-size: 112%; } }
@@ -457,7 +459,7 @@ body {
 :focus {
   outline: 0; }
 
-div[class^="page-"] {
+.page {
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -467,32 +469,34 @@ div[class^="page-"] {
   box-sizing: border-box;
   border: 20px solid white; }
 
-header[role="main"],
-footer[role="main"] {
+.page > header,
+.page > footer {
   padding: 3em 3em 1.5em;
   box-sizing: border-box;
   flex: none; }
 
-header[role="main"] {
+.page > header {
   overflow: hidden; }
-  header[role="main"] > section {
+  .page > header > section {
     float: left; }
-    header[role="main"] > section h1 {
+    .page > header > section h1 {
       margin-bottom: 0px; }
-    header[role="main"] > section p {
+      .page > header > section h1 a {
+        font-weight: bold; }
+    .page > header > section p {
       margin: 0px; }
-  header[role="main"] > nav {
+  .page > header > nav {
     float: right;
     display: flex;
     width: 40%; }
 
-footer[role="main"] {
+.page > footer {
   width: 100%;
   padding: 1.5em 3em 3em; }
-  footer[role="main"] p, footer[role="main"] ul {
+  .page > footer p, .page > footer ul {
     display: inline-block;
     text-align: right; }
-  footer[role="main"] p {
+  .page > footer p {
     padding-right: 1.5em; }
 
 .content {

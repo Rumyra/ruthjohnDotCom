@@ -13,7 +13,6 @@ body {
   font-family: $font;
   font-size: 100%;
   color: $white;
-  line-height: 1.4;
   @include at-least($screenXlarge) { font-size: 112%; }
   @include until($screenMedium) { font-size: 90%; }
   @include until($screenSmall) { font-size: 84%; }
@@ -24,25 +23,28 @@ body {
 // 2. SITE STRUCTURE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // 2.1 Main header, aside & footer
 // Default layout is full width add .layout-sidebar for large screens to have side nav
-div[class^="page-"] {
+.page {
   display: flex; flex-direction: column;
   width: 100vw; height: 100vh;
   margin: 0px; padding: 0px;
   box-sizing: border-box;
   border:20px solid $white;
 }
-header[role="main"],
-footer[role="main"] {
+.page > header,
+.page > footer {
   padding: $verticalSpace*2 $gutter*2 $verticalSpace;
   box-sizing:border-box;
   flex: none;
 }
 
-header[role="main"] {
+.page > header {
   overflow: hidden;
   & > section {
     float:left;
-    h1 {margin-bottom:0px;}
+    h1 {
+      margin-bottom:0px;
+      a {font-weight: bold;}
+    }
     p {margin:0px;}
   }
   & > nav {
@@ -52,7 +54,7 @@ header[role="main"] {
   }
 }
 
-footer[role="main"] {
+.page > footer {
   width: 100%;
   padding: $verticalSpace $gutter*2 $verticalSpace*2;
   p, ul {

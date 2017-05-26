@@ -19,11 +19,12 @@ $black: darken($slate,20%);
 @include font-face('Khula', '../fonts/Khula/Khula-SemiBold', bold);
 
 $font:'Khula', Helvetica, Arial, sans-serif !default;
-$fontSize:1em !default;
-$lineHeight:1.5 !default;
+$fontSize:0.9em !default;
+$lineHeight:1.8 !default;
+$letterSpacing:0.1em;
 
 $headerFont: 'Khula', Helvetica, Arial, sans-serif !default;
-$headerLineHeight:1.3;
+$headerLineHeight:1.5;
 
 $iconFont:'Font Awesome', monospace !default;
 $iconFontSize:20px !default;

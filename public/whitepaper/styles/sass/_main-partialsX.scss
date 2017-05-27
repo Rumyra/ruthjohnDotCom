@@ -28,11 +28,23 @@ body {
   width: 100vw; height: 100vh;
   margin: 0px; padding: 0px;
   box-sizing: border-box;
-  border:20px solid $white;
+  border:6px solid $white;
 }
+
+@mixin pageBorder($colour) {
+  box-shadow:
+    inset 0px 0px 0px 3px $colour,
+    inset 0px 0px 0px 8px $white
+  ;
+}
+
+.home {@include pageBorder($denim);}
+.portfolio {@include pageBorder($peach);}
+.contact {@include pageBorder($slate);}
+
 .page > header,
 .page > footer {
-  padding: $verticalSpace*2 $gutter*2 $verticalSpace;
+  padding: $verticalSpace $gutter $verticalSpace/2;
   box-sizing:border-box;
   flex: none;
 }
@@ -48,27 +60,55 @@ body {
     p {margin:0px;}
   }
   & > nav {
-    float:right; display:flex;
-    width: 40%;
-    // a {flex-item:space-around;}
+    float:right;
+    display:flex; justify-content:space-between;
+    width: 36%;
+    a {
+      padding: $verticalSpace/3 $gutter/2;
+      border-width:2px;
+      background-color: $white;
+      box-shadow: inset 0px 0px 0px 2px $denim;
+      color:$denim;
+      text-transform: uppercase;
+      font-weight: bold;
+      &:hover {
+        background-color:transparent;
+        box-shadow:none;
+        color: $white;
+      }
+    }
+  }
+}
+.portfolio {
+  nav a {
+    box-shadow: inset 0px 0px 0px 2px $peach;
+    color:$peach;
+  }
+}
+.contact {
+  nav a {
+    box-shadow: inset 0px 0px 0px 2px $slate;
+    color:$slate;
   }
 }
 
 .page > footer {
   width: 100%;
-  padding: $verticalSpace $gutter*2 $verticalSpace*2;
+  padding: $verticalSpace $gutter;
   p, ul {
       display: inline-block;
       text-align: right;
   }
   p {padding-right: $verticalSpace;}
+  ul {@include clearListStyles;}
 }
 
-.content {
-  flex: 1 0 auto;
-  padding: $verticalSpace $gutter 0px;
+main {
+  flex: 1 0 auto; box-sizing:border-box;
+  margin: 0px $gutter;
+  padding: $verticalSpace 0px;
 }
-.content::after {
+main::after {
   content: '\00a0'; /* &nbsp; */
   display: block;
   margin-top: $verticalSpace;

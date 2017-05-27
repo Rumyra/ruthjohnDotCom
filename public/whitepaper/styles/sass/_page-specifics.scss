@@ -10,24 +10,24 @@
 //   border: 2px solid $white; border-width: 2px 0px;
 //   min-height: 86vh;
 // }
-.content {
+main {
   border:1px solid $white;
   border-width: 1px 0px;
 }
 
 // home
-.page-home {
-  background-color: $pageHomeColour;
-}
-
-// about
-.page-about {
-  background-color: $pageAboutColour;
+.home {
+  background-color: $denim;
+  @include gradient($denim, lighten($denim, 10%), 0deg);
+  main {
+    p {width:70%;}
+  }
 }
 
 // portfolio
 .page-portfolio {
-  background-color: $pageThingsColour;
+  background-color: $peach;
+  @include gradient($peach, lighten($peach, 10%), 0deg);
 }
 .portfolio-list {
   ul {
@@ -48,6 +48,7 @@
 }
 
 // contact
-.page-contact {
-  background-color: $pageContactColour;
+.contact {
+  background-color: $slate;
+  @include gradient($slate, lighten($slate, 10%), 0deg);
 }

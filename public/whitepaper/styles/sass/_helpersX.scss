@@ -44,6 +44,12 @@
   }
 }
 
+@mixin gradient($colOne, $colTwo, $deg) {
+  background-image:
+    linear-gradient($deg, $colOne, $colTwo)
+  ;
+}
+
 @mixin setPageStyle($colour) {
   a {color:$colour; &:hover{color:$white;}}
 }

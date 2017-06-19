@@ -95,12 +95,32 @@ body {
 .page > footer {
   width: 100%;
   padding: $verticalSpace $gutter;
+  display:flex; justify-content:space-between;
   p, ul {
-      display: inline-block;
-      text-align: right;
+      width:50%;
+      // display: inline-block;
+      // text-align: right;
   }
-  p {padding-right: $verticalSpace;}
-  ul {@include clearListStyles;}
+  // p {padding-right: $verticalSpace;}
+  ul {
+    @include clearListStyles;
+    display: flex; justify-content:space-between;
+    li {
+      a {
+        border:none;
+        svg {
+          width:auto; height:48px;
+          padding:$verticalSpace/2 $gutter/2;
+          box-sizing:border-box;
+          background-color: $white;
+          border-radius: 2px;
+          border: 2px solid white;
+          box-shadow: inset 0px 0px 0px 2px $denim;
+          path {fill:$denim;}
+        }
+      }
+    }
+  }
 }
 
 main {

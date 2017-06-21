@@ -443,7 +443,7 @@ audio:not([controls]) {
 /* navigation and menus */
 /* html, body, header, footer & basic main layout */
 html {
-  background-color: #94abb4; }
+  background-color: #444679; }
 
 body {
   overflow: auto;
@@ -474,10 +474,10 @@ body {
   border: 6px solid white; }
 
 .home {
-  box-shadow: inset 0px 0px 0px 3px #94abb4, inset 0px 0px 0px 8px white; }
+  box-shadow: inset 0px 0px 0px 3px #444679, inset 0px 0px 0px 8px white; }
 
 .portfolio {
-  box-shadow: inset 0px 0px 0px 3px #facbbd, inset 0px 0px 0px 8px white; }
+  box-shadow: inset 0px 0px 0px 3px #3f9d88, inset 0px 0px 0px 8px white; }
 
 .contact {
   box-shadow: inset 0px 0px 0px 3px #7e7b7f, inset 0px 0px 0px 8px white; }
@@ -507,8 +507,8 @@ body {
       padding: 0.6em 0.9em;
       border-width: 2px;
       background-color: white;
-      box-shadow: inset 0px 0px 0px 2px #94abb4;
-      color: #94abb4;
+      box-shadow: inset 0px 0px 0px 2px #444679;
+      color: #444679;
       text-transform: uppercase;
       font-weight: bold; }
       .page > header > nav a:hover {
@@ -517,8 +517,8 @@ body {
         color: white; }
 
 .portfolio nav a {
-  box-shadow: inset 0px 0px 0px 2px #facbbd;
-  color: #facbbd; }
+  box-shadow: inset 0px 0px 0px 2px #3f9d88;
+  color: #3f9d88; }
 
 .contact nav a {
   box-shadow: inset 0px 0px 0px 2px #7e7b7f;
@@ -552,9 +552,9 @@ body {
         background-color: white;
         border-radius: 2px;
         border: 2px solid white;
-        box-shadow: inset 0px 0px 0px 2px #94abb4; }
+        box-shadow: inset 0px 0px 0px 2px #444679; }
         .page > footer ul li a svg path {
-          fill: #94abb4; }
+          fill: #444679; }
 
 main {
   flex: 1 0 auto;
@@ -577,30 +577,41 @@ main {
   border-width: 1px 0px; }
 
 .home {
-  background-color: #94abb4;
-  background-image: linear-gradient(0deg, #94abb4, #b2c3c9); }
+  background-color: #444679;
+  background-image: linear-gradient(0deg, #444679, #565999); }
   .home main p {
     width: 70%; }
 
-.page-portfolio {
-  background-color: #facbbd;
-  background-image: linear-gradient(0deg, #facbbd, #fef0ec); }
+.portfolio {
+  background-color: #3f9d88;
+  background-image: linear-gradient(0deg, #3f9d88, #54bba4); }
 
 .portfolio-list ul {
-  display: flex; }
+  display: grid;
+  justify-content: end; }
 
 .portfolio-list li {
-  width: 13vw;
-  height: 13vw;
-  margin: 2vw;
+  width: 6vw;
+  height: 6vw;
   position: relative; }
+  .portfolio-list li:nth-of-type(1) {
+    grid-area: 1 / -1 / 1 / -2; }
+  .portfolio-list li:nth-of-type(2) {
+    grid-area: 1 / -2 / 1 / -3; }
+  .portfolio-list li:nth-of-type(3) {
+    grid-area: 1 / -3 / 1 / -4; }
+  .portfolio-list li:nth-of-type(4) {
+    grid-area: 2 / -2 / 2 / -3; }
+  .portfolio-list li:nth-of-type(5) {
+    grid-area: 2 / -3 / 2 / -4; }
+  .portfolio-list li:nth-of-type(6) {
+    grid-area: 3 / -3 / 3 / -4; }
+  .portfolio-list li:nth-of-type(7) {
+    grid-area: 2 / -4 / 2 / -5; }
   .portfolio-list li img {
     position: absolute;
     left: 0px;
     top: 0px; }
-  .portfolio-list li.featured {
-    width: 40vw;
-    height: 30vw; }
 
 .contact {
   background-color: #7e7b7f;

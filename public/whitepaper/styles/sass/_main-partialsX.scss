@@ -7,7 +7,7 @@
 
 
 // 1. HTML & BODY ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-html { background-color: $denim; }
+html { background-color: $blue; }
 body {
   overflow: auto;
   font-family: $font;
@@ -38,8 +38,8 @@ body {
   ;
 }
 
-.home {@include pageBorder($denim);}
-.portfolio {@include pageBorder($peach);}
+.home {@include pageBorder($blue);}
+.portfolio {@include pageBorder($turq);}
 .contact {@include pageBorder($slate);}
 
 .page > header,
@@ -67,8 +67,8 @@ body {
       padding: $verticalSpace/3 $gutter/2;
       border-width:2px;
       background-color: $white;
-      box-shadow: inset 0px 0px 0px 2px $denim;
-      color:$denim;
+      box-shadow: inset 0px 0px 0px 2px $blue;
+      color:$blue;
       text-transform: uppercase;
       font-weight: bold;
       &:hover {
@@ -81,8 +81,8 @@ body {
 }
 .portfolio {
   nav a {
-    box-shadow: inset 0px 0px 0px 2px $peach;
-    color:$peach;
+    box-shadow: inset 0px 0px 0px 2px $turq;
+    color:$turq;
   }
 }
 .contact {
@@ -115,8 +115,8 @@ body {
           background-color: $white;
           border-radius: 2px;
           border: 2px solid white;
-          box-shadow: inset 0px 0px 0px 2px $denim;
-          path {fill:$denim;}
+          box-shadow: inset 0px 0px 0px 2px $blue;
+          path {fill:$blue;}
         }
       }
     }
